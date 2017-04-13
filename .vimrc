@@ -36,6 +36,8 @@ Plugin 'garbas/vim-snipmate'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'tpope/vim-fugitive'
+" Color scheme
+Plugin 'reewr/vim-monokai-phoenix'
 
 
 " All of your Plugins must be added before the following line
@@ -165,7 +167,8 @@ nnoremap <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
 " --------------------------- COLOR START --------------------------------------------------!!
 " Setting the color theme
 set background=dark
-colorscheme PaperColor
+"colorscheme PaperColor
+colorscheme monokai-phoenix
 
 "Molokai
 "let g:molokai_original = 1
@@ -175,8 +178,26 @@ colorscheme PaperColor
 " Color scheme
 " mkdir -p ~/.vim/colors && cd ~/.vim/colors
 " wget -O wombat256mod.vim http://www.vim.org/scripts/download_script.php?src_id=13400
-set t_Co=256
-color wombat256mod
+"set t_Co=256
+"color wombat256mod
+
+let g:airline_theme='light'
+let g:airline_powerline_fonts = 1
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+let g:airline_symbols.space = "\ua0"
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+set guifont=Source\ Code\ Pro\ for\ Powerline
+
+
+
+
+
+
+
 
 " --------------------------- COLOR END --------------------------------------------------!!
 
